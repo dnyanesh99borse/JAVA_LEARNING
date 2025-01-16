@@ -182,4 +182,127 @@
 // }
 
 
+//========================INFINTE LOOP USING DO-WHILE=======================
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int i = 1;
+//         do{
+//             System.out.println("DEFINATELY I WILL BECOME SUCCESSFULL INDEPENDET BILLIONAIRE AND BUSINESS TYCOON..!");
+//             i++;
+//         }while(i<=10);
+//     }
+// }
 
+
+//================TAKE INPUT FROM THE USER UPTO USER WANT AND RETURN THE COUNT OF +VE -ve AND 0's======================//
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+        
+//         int positiveCount = 0, negativeCount = 0, zeroCount = 0;
+//         char choice;
+        
+//         do {
+//             System.out.print("Enter a number: ");
+//             int number = sc.nextInt();
+            
+//             if (number > 0) {
+//                 positiveCount++;
+//             } else if (number < 0) {
+//                 negativeCount++;
+//             } else {
+//                 zeroCount++;
+//             }
+            
+//             System.out.print("Do you want to continue? (y/n): ");
+//             choice = sc.next().charAt(0);
+//         } while (choice == 'y' || choice == 'Y');
+        
+//         System.out.println("\nSummary:");
+//         System.out.println("Positive numbers: " + positiveCount);
+//         System.out.println("Negative numbers: " + negativeCount);
+//         System.out.println("Zeros: " + zeroCount);
+        
+//         sc.close();
+//     }
+// }
+
+
+
+// import java.util.*;
+// public class Main{
+//         public static  void Power(int x,int n){
+//                 if(n == 0){
+//                          System.out.println("the "+ x + " to the power " + n + " is: 1 ");
+//                 }else{
+//                         double Power = Math.pow(x,n);
+//                         System.out.println(x+" raise to the power " + n + " is: "+ Power);
+//                 }
+//         }
+
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.println("Enter the value of x: ");
+//                 int x = sc.nextInt();
+//                 System.out.println("Enter the value of n: ");
+//                 int n = sc.nextInt();
+//                 Power(x, n);
+//         }
+//         }
+
+
+// import java.util.*;
+// public class Main{
+//         public static void GCDCAL(int a, int b){
+//                 if(b == 0){
+//                   System.out.println("GCD of " + a + " and " + b + " is" + a);
+//                 }else{
+//                         while(b != 0){
+//                         int temp = b;
+//                         b = a % b;
+//                         a = temp;
+//                         }
+//                         System.out.println("GCD of " + a + " and " + b + " is: " + a);
+//                 }
+//         }
+
+        
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.println("Enter the value of a: ");
+//                 int a = sc.nextInt();
+//                 System.out.println("Enter the value of b: ");
+//                 int b = sc.nextInt();
+//                 GCDCAL(a, b);
+//         }
+
+// }
+
+
+//=====================PROGRAM TO FIND FIBONACCI SERIES===========================
+// import java.util.*;
+// public class Main{
+//         public static void FindFibonacci(int n){
+//         int a = 0;
+//         int b = 1;
+//         for(int i = 0; i<=n; i++){
+//         int ans = a + b;
+//         System.out.print(ans + " ");
+//         a = b;
+//         b = ans;
+//         }
+// }
+        
+
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.println("Enter the value of n: ");
+//                 int n = sc.nextInt();
+//                 FindFibonacci(n);
+//         }
+
+// }
