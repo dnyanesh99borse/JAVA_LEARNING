@@ -309,18 +309,77 @@
 
 
 //=============================ARRAYS================================
-public class Main{
-        public static void main(String[] args) {
-            int[] marks = new int[3];
-            marks[0] = 97;
-            marks[1] = 98;
-            marks[2] = 95;
-        //     System.out.println(marks[0]);
-        //     System.out.println(marks[1]);
-        //     System.out.println(marks[2]);
+// public class Main{
+//         public static void main(String[] args) {
+//             int[] marks = new int[3];
+//             or int marks[] = new int[3]; 
+//             marks[0] = 97;
+//             marks[1] = 98;
+//             marks[2] = 95;
+//         //     System.out.println(marks[0]);
+//         //     System.out.println(marks[1]);
+//         //     System.out.println(marks[2]);
 
-        for(int i = 0; i<3; i++){
-                System.out.println(marks[i]);
+//         for(int i = 0; i<3; i++){
+//                 System.out.println(marks[i]);
+//         }
+//  }
+// }
+
+
+
+// import java.util.Stack;
+
+// public class Main {
+
+//     public static boolean isValid(String s) {
+//         Stack<Character> stack = new Stack<>();
+//         for (int i = 0; i < s.length(); i++) {
+//             char c = s.charAt(i);
+
+//             if (c == '(' || c == '{' || c == '[') {
+//                 stack.push(c);
+//             } else {
+//                 if (stack.isEmpty() || !isMatchingPair(stack.pop(), c)){
+//                     return false;
+//                 }
+//             }
+//         }
+//         return stack.isEmpty();
+//     }
+//     private static boolean isMatchingPair(char open,char close){
+//         return(open == '(' && close == ')' || open == '{' && close == '}' || open == '[' && close == ']');
+//     }
+
+//     public static void main(String args[]){
+//         String s1 = "()[]{}";
+//         String s2 = "(]";
+//         String s3 = "([)]";
+//         String s4 = "{[]}";
+
+//         System.out.println("This is " + isValid(s1) + " Parenthesis");
+//         System.out.println("This is " + isValid(s2) + " Parenthesis");
+//         System.out.println("This is " + isValid(s3) + " Parenthesis");
+//   
+//      System.out.println("This is " + isValid(s4) + " Parenthesis");
+//     }
+// }
+
+
+import java.util.*;
+public class Main{
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of Array: ");
+        int size = sc.nextInt();
+        int numbers[] = new int[size];
+        for(int i = 0; i<=size; i++){
+            System.out.println(numbers[i]);
         }
- }
+    }
+   
 }
+
+//here it will by default store the null values of that respective datatype 
+//if we are running such type of code.
