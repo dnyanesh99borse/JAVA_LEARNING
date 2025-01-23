@@ -366,20 +366,93 @@
 // }
 
 
-import java.util.*;
-public class Main{
+// import java.util.*;
+// import java.util.Arrays;
+// public class Main{
 
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the size of Array: ");
-        int size = sc.nextInt();
-        int numbers[] = new int[size];
-        for(int i = 0; i<=size; i++){
-            System.out.println(numbers[i]);
-        }
-    }
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter the size of Array: ");
+//         int size = sc.nextInt();
+//         int numbers[] = new int[size];
+//         System.out.println("Enter the elements of Array: ");
+//         for(int i = 0; i<numbers.length; i++){
+//             numbers[i] = sc.nextInt();
+//         }
+//         System.out.print("The Array is: " + Arrays.toString(numbers));
+//     }
    
-}
+// }
 
 //here it will by default store the null values of that respective datatype 
 //if we are running such type of code.
+
+
+//QUESTION 1:
+// import java.util.*;
+// import java.util.Arrays;
+// public class Main{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter the Size of Array: ");
+//         int size = sc.nextInt();
+//         System.out.print("Enter the Element you want to find: ");
+//         int x = sc.nextInt();
+//         int array[] = new int[size];
+//         for(int i = 0;i<array.length;i++){
+//             System.out.print("Enter the Element of Array: ");
+//             array[i] = sc.nextInt();
+//         }
+//         System.out.print("The Array is: " + Arrays.toString(array));
+
+//         for(int i = 0;i<array.length;i++){
+//             if(array[i] == x){
+//                 System.out.print("\nThe element is found at index " + i);
+//             }
+//         }
+//     }
+// }
+
+
+// QUESTION 2:
+//  import java.util.*;
+//  import java.util.Arrays;
+//  public class Main{
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter the Size of Array: ");
+//         int size = sc.nextInt();
+       
+//         int array[] = new int[size];
+//         for (int i = 0; i<array.length ;i++){
+//             System.out.print("Enter the Element of Array: ");
+//             array[i ] = sc.nextInt();
+//         }
+//         System.out.print("The Array is: " + Arrays.toString(array));
+
+//         for(int i = 0; i<array.length;i++){
+//             int largest = array[0];
+//             int smallest = array[0];
+//             if(array[i] > largest){
+//                 largest = array[i];
+//             }
+//             System.out.println("The largest element in the array is: " + largest);
+//             if(array[i] < smallest){
+//                 smallest = array[i];
+//             }
+//             System.out.println("The smallest element in the array is: " + smallest);
+//         }
+//     }
+//  }
+
+import java.util.Arrays;
+public class Main{
+    public static void main(String args[]){
+        int array[] = {1,2,3,4,5};
+        int array2[] = new int[array.length];
+        for(int i = 0; i<array.length;i++){
+            array2[i] = array[array.length - 1 -i];
+        }
+        System.out.println(Arrays.toString(array2));
+    }
+}
