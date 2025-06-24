@@ -456,30 +456,61 @@
 
 
 //6) LEETCODE: TWO SUM QUESTION.
-class Solution{
-    public int[] twoSum(int[] nums,int target){
-        int n = nums.length;
-        int[] ans = new int[2];
+// class Solution{
+//     public int[] twoSum(int[] nums,int target){
+//         int n = nums.length;
+//         int[] ans = new int[2];
 
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                if(i != j && nums[i]+nums[j]==target){
-                    ans[0] = i;
-                    ans[1] = j;
-                }
-            }
+//         for(int i=0;i<n;i++){
+//             for(int j=0;j<n;j++){
+//                 if(i != j && nums[i]+nums[j]==target){
+//                     ans[0] = i;
+//                     ans[1] = j;
+//                     break;
+//                 }
+//             }
+//         }
+//         return ans;
+//     }
+// }
+// public class Main{
+//     public static void main(String[] args){
+//         int[] array = {2,7,11,15};
+//         int find = 18;
+//         Solution s = new Solution();
+//         s.twoSum(array, find);
+//         int[] result = s.twoSum(array, find);  // Fix: capture result
+//         System.out.println("Indices: " + result[0] + ", " + result[1]);
+//     }
+// }
+
+
+//7)REVERSE AN ARRAY WITHOUT USING ANOTHER ARRAY:
+import java.util.Arrays;
+
+class ReverseArray {
+
+    public int[] Reverse(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n / 2; i++) {
+            int j = n - 1 - i;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
-        return ans;
-    }
-}
-public class Main{
-    public static void main(String[] args){
-        int[] array = {2,7,11,15};
-        int find = 18;
-        Solution s = new Solution();
-        s.twoSum(array, find);
-        int[] result = s.twoSum(array, find);  // Fix: capture result
-        System.out.println("Indices: " + result[0] + ", " + result[1]);
+
+        return arr;
+
     }
 }
 
+public class Main {
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7};
+        ReverseArray ra = new ReverseArray();
+        int[] result = ra.Reverse(array);
+        System.out.println("The Reversed Array is: " + Arrays.toString(result));
+    }
+}
