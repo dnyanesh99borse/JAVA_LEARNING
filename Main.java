@@ -313,20 +313,173 @@
     
 
 //------example:2-----
-class AgeToSmallException extends Exception{
-    public AgeToSmallException(String message){
-        super(message);
+// class AgeToSmallException extends Exception{
+//     public AgeToSmallException(String message){
+//         super(message);
+//     }
+// }
+// public class Main{
+//     public static void main(String[] args){
+//         int age = 15;
+//         try {
+//             if(age<18){
+//                 throw new AgeToSmallException("you must be 18+ to register.");
+//             }
+//         } catch (AgeToSmallException e) {
+//             System.out.println("Registration Failed: "+e.getMessage());
+//         }
+//     }
+// }
+
+
+//=======================THROWS IN JAVA========================
+//The throws keyword is used in method declarations to indicate that the method might throw an exception.
+
+// It's like telling Java:
+// Hey, this method might cause an exception, 
+// so the caller should be prepared to handle it
+
+
+// import java.io.File;
+// import java.io.FileNotFoundException;
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args) {
+//         try {
+//             readFile();
+//         } catch (FileNotFoundException e) {
+//             System.out.println(" File not found: " + e.getMessage());
+//         }
+//     }
+
+//     public static void readFile() throws FileNotFoundException{
+//         File file = new File("data.txt");
+//         Scanner scanner = new Scanner(file);
+//         while(scanner.hasNextLine()){
+//             System.out.println(scanner.nextLine());
+//         }
+//     }
+// }
+
+
+
+/*===========================================================DATA STRUCTURES AND ALGORITHM USING JAVA==================================================== */
+
+//--------------------------------ARRAYS----------------------------//
+//1)
+// public class Main {
+//     public static void main(String[] args) {
+//         int[] marks = {19, 35, 25, 73, 64, 59};
+
+//         for (int i = 0; i < marks.length; i++) {
+//             if (marks[i] < 35) {
+//                 System.out.println("the roll number is: "+i);
+//             }
+//         }
+//     }
+// }
+
+//2)
+// public class Main{
+//     public static void main(String[] args){
+//         int[] arr = {32,43,54,23};
+//         int sum = 0;
+//         for(int i = 0;i<arr.length;i++){
+//             sum += arr[i];
+//         }
+//         System.out.println("Sum of the elements of the array is: "+sum);
+//     }
+// }
+
+//3)
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter the Size of the Array: ");
+//         int size = sc.nextInt();
+//         int[] arr = new int[size];
+//         System.out.println("Enter the Elements of the Array: ");
+//         for(int i = 0;i<size;i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         for(int i=0;i<arr.length;i++){
+//             System.out.print(arr[i]+",");
+//         }
+//         System.out.println("");
+
+//         System.out.println("Enter the x to find: ");
+//         int x = sc.nextInt();
+//         for(int i = 0; i< arr.length;i++){
+//             if(arr[i] == x){
+//                 System.out.println("Element x is on index: "+i);
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+//4)
+// public class Main{
+//     public static void main(String[] args){
+//         int[] arr = {34,5,24,77,55};
+//         int max = -1;
+//         int secmax = -1;
+//         for(int i=0;i<arr.length;i++){
+//             if(arr[i] > max){
+//                 max = arr[i];
+//         }
+//          for(int j=0;j<i;j++){
+//                     if(arr[i]<max) secmax = arr[i];
+//                 }
+        
+//             }
+//         System.out.println("The max element in the array is: "+max);
+//         System.out.println("The second-max element in the array is: "+secmax);
+//     }
+// }
+
+
+//5)
+// public class Main{
+//     public static void main(String[] args){
+//         int[] arr = {34, 35, 22, 66, 45, 33};
+//         int x = 22;
+//         int sum = 0;
+//         for(int i=0;i<arr.length;i++){
+//             if(arr[i] > x) sum += arr[i];
+//         }
+//         System.out.println("Sum of the elements greater than x are: "+sum);
+//     }
+// }
+
+
+//6) LEETCODE: TWO SUM QUESTION.
+class Solution{
+    public int[] twoSum(int[] nums,int target){
+        int n = nums.length;
+        int[] ans = new int[2];
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i != j && nums[i]+nums[j]==target){
+                    ans[0] = i;
+                    ans[1] = j;
+                }
+            }
+        }
+        return ans;
     }
 }
 public class Main{
     public static void main(String[] args){
-        int age = 15;
-        try {
-            if(age<18){
-                throw new AgeToSmallException("you must be 18+ to register.");
-            }
-        } catch (AgeToSmallException e) {
-            System.out.println("Registration Failed: "+e.getMessage());
-        }
+        int[] array = {2,7,11,15};
+        int find = 18;
+        Solution s = new Solution();
+        s.twoSum(array, find);
+        int[] result = s.twoSum(array, find);  // Fix: capture result
+        System.out.println("Indices: " + result[0] + ", " + result[1]);
     }
 }
+
