@@ -12,14 +12,12 @@
 //             array[i] = sc.nextInt();
 //         }
 //         System.out.print("The Array is: "  + Arrays.toString(array));
-
 //         for(int i = 0; i < array.length - 1; i++){
 //             //here array.length is for terminatio conditon that is exception handling
 //             if(array[i] > array[i + 1]){
 //                 isAscending = false;
 //             }
 //         }
-
 //         if(isAscending){
 //             System.out.println("\nThe array is in ascending order");
 //         }else{
@@ -27,11 +25,7 @@
 //         }
 //     }
 // }
-
-
 //=========================2D ARRAYS======================================
-
-
 // import java.util.*;
 // public class Main{
 //     public static void main(String args[]){
@@ -40,7 +34,6 @@
 //     int rows = sc.nextInt();
 //     System.out.print("Enter the number of cols of Array: ");
 //     int cols = sc.nextInt();
-
 //     int[][] numbers = new int[rows][cols];
 //     for(int i = 0; i < rows; i++){
 //         for(int j = 0; j < cols; j++){
@@ -48,7 +41,6 @@
 //             numbers[i][j] = sc.nextInt();
 //         }
 //     }
-
 //     System.out.println("\nArray is:");
 //     for(int i = 0; i < rows; i++){
 //         for(int j = 0; j < cols; j++){
@@ -58,9 +50,6 @@
 //     }
 //   }
 // }
-
-
-
 // import java.util.*;
 // public class Main{
 //     public static void main(String args[]){
@@ -69,7 +58,6 @@
 //     int rows = sc.nextInt();
 //     System.out.print("Enter the number of cols of Array: ");
 //     int cols = sc.nextInt();
-
 //     int[][] numbers = new int[rows][cols];
 //     for(int i = 0; i < rows; i++){
 //         for(int j = 0; j < cols; j++){
@@ -77,7 +65,6 @@
 //             numbers[i][j] = sc.nextInt();
 //         }
 //     }
-
 //     System.out.print("Enter the number to find: ");
 //     int x = sc.nextInt();
 //     System.out.println("\nArray is:");
@@ -93,45 +80,33 @@
 //     }
 //   }
 // }
-
-
 //===========================STRINGS======================================//
 // public class Main{
 //     public static void main(String args[]){
 //         String name = "Dnyaneshwar";
 //         String Fullname = "Dnyaneshwar Sambhaji Borse";
 //         String sentence = "Hi am a Successfull Independent Billionaire";
-
 //         System.out.println(name +Fullname + sentence);
 //     }
 // }
-
 // import java.util.*;
-
 // public class Main {
 //     public static void main(String[] args) {
 //         Scanner sc = new Scanner(System.in);
-
 //         System.out.print("Enter your name: ");
 //         String name = sc.nextLine();  // Use nextLine() to capture full name including spaces
-
 //         System.out.print("Enter your Bio: ");
 //         String bio = sc.nextLine();  // Use nextLine() to capture full bio including spaces
-
 //         System.out.println("The name of the user is: " + name);
 //         System.out.println("The Bio of the user is: " + bio);
 //     }
 // }
-
 //DIFFERENT FUNCTIONS AND METHODS ON STRING:
-
 //1).compareTo() = to compare two different strings.
 // public class Main{
 //     public static void main(String[] args) {
 //         String name1 = "Dnyanesh";
 //         String name2 = "Elon";
-
-        
 //         if(name1.compareTo(name2) == 0){
 //             System.out.println(name1 + " equal to " + name2);
 //         }else if(name1.compareTo(name2) < 0){
@@ -141,8 +116,6 @@
 //         }
 //     }
 // }
-
-
 //-------------------------EXCEPTION HANDLING---------------------------
 /*
  * TYPES OF ERRORS:
@@ -153,11 +126,10 @@
  * "Exception handling is a way to handle the runtime errors so that the normal flow of the application can be maintained."
  *  "It is a object which throwns on a runtime at runtime.  "
  */
-
- //TRY AND CATCH FOR EXCEPTION HANDLING.
- //Using this method we provides the code which can give excetion in try function 
- //we writes the action or the activity that will perform if that exception will occur 
- //inside the CATCH section.
+//TRY AND CATCH FOR EXCEPTION HANDLING.
+//Using this method we provides the code which can give excetion in try function 
+//we writes the action or the activity that will perform if that exception will occur 
+//inside the CATCH section.
 /* 
  public class Main {
     public static void main(String[] args) {
@@ -172,14 +144,11 @@
         }
     }
 }
-*/
-
+ */
 // catch (ArithmeticException e): in this line of code the e is system generated object for 
 //ArithmeticException class which is used to handle the exception.
-
 //like : Student stu = new Student();
 //System.out.println(stu); it will print the info about that object of the student class. 
-
 // public class Main{
 //     public static void main(String[] args) {
 //         int[] numerators = {10,200,30,40};
@@ -189,7 +158,6 @@
 //     }
 //     System.out.println("Good job: ");
 // }
-
 // public static int divide(int a,int b) {
 //     try {
 //         return a / b;
@@ -199,28 +167,21 @@
 //     }
 // }
 // }
-
 //here first two steps will executer fluently and then at the iteration three 
 //where the no. is dividing by 0 and thus the error or exception will arise and thus
 //there by handling the errror the message will print and then after the remaining iterations 
 //will also execute the remaing steps... in try and cathch..
-
 //WE CAN ALSO USE A MULTIPLE CATCH FOR VARIOUS EXCEPTIONS...
 //but there HEIRACHICAL ORDER IS IMPORTANT..
-
-
 // public class Main {
 //     public static void main(String[] args) {
 //         int[] numerators = {10, 200, 30, 40};
 //         int[] denominators = {1, 2, 0, 4};
-
 //         for (int i = 0; i < denominators.length; i++) {
 //             System.out.println("Result: " + divide(numerators[i], denominators[i]));
 //         }
-        
 //         System.out.println("Good job!");
 //     }
-
 //     public static int divide(int a, int b) {
 //         try {
 //             return a / b;
@@ -233,7 +194,6 @@
 //         }
 //     }
 // }
-
 // public class Main{
 //     public static void main(String[] args){
 //         int a = 10;
@@ -247,11 +207,9 @@
 //         System.out.println("Program continues...");
 //     }
 // }
-
 //==========TRY-CATCH-FINALLY===============
 //The finally block is always executed,
 // no matter what — even if an exception is not thrown or even if you return from the method.
-
 // public class Main{
 //     public static void main(String[] args){
 //     try{
@@ -264,7 +222,6 @@
 //     }
 //   }
 // }
-
 //=============MULTIPLE CATCH BLOCKS=================
 //You can handle different types of exceptions differently:
 // public class Main{
@@ -279,8 +236,6 @@
 //         }
 //     }
 // }
-
-
 //=================Catching All Exceptions (Not Recommended Always)================
 // public class Main{
 //     public static void main(String[] args) {
@@ -291,16 +246,12 @@
 //         }
 //     }
 // }
-
-
 //====================CUSTOM EXCEPTION============================
-
 // class MyException extends Exception{
 //             public MyException(String message){
 //                 super(message);
 //             }
 // }
-
 // public class Main{
 //     public static void main(String[] args){
 //         try{
@@ -310,8 +261,6 @@
 //         }
 //     }
 // }
-    
-
 //------example:2-----
 // class AgeToSmallException extends Exception{
 //     public AgeToSmallException(String message){
@@ -330,16 +279,11 @@
 //         }
 //     }
 // }
-
-
 //=======================THROWS IN JAVA========================
 //The throws keyword is used in method declarations to indicate that the method might throw an exception.
-
 // It's like telling Java:
 // Hey, this method might cause an exception, 
 // so the caller should be prepared to handle it
-
-
 // import java.io.File;
 // import java.io.FileNotFoundException;
 // import java.util.Scanner;
@@ -351,7 +295,6 @@
 //             System.out.println(" File not found: " + e.getMessage());
 //         }
 //     }
-
 //     public static void readFile() throws FileNotFoundException{
 //         File file = new File("data.txt");
 //         Scanner scanner = new Scanner(file);
@@ -360,17 +303,12 @@
 //         }
 //     }
 // }
-
-
-
 /*===========================================================DATA STRUCTURES AND ALGORITHM USING JAVA==================================================== */
-
 //--------------------------------ARRAYS----------------------------//
 //1)
 // public class Main {
 //     public static void main(String[] args) {
 //         int[] marks = {19, 35, 25, 73, 64, 59};
-
 //         for (int i = 0; i < marks.length; i++) {
 //             if (marks[i] < 35) {
 //                 System.out.println("the roll number is: "+i);
@@ -378,7 +316,6 @@
 //         }
 //     }
 // }
-
 //2)
 // public class Main{
 //     public static void main(String[] args){
@@ -390,7 +327,6 @@
 //         System.out.println("Sum of the elements of the array is: "+sum);
 //     }
 // }
-
 //3)
 // import java.util.Scanner;
 // public class Main{
@@ -403,12 +339,10 @@
 //         for(int i = 0;i<size;i++){
 //             arr[i] = sc.nextInt();
 //         }
-
 //         for(int i=0;i<arr.length;i++){
 //             System.out.print(arr[i]+",");
 //         }
 //         System.out.println("");
-
 //         System.out.println("Enter the x to find: ");
 //         int x = sc.nextInt();
 //         for(int i = 0; i< arr.length;i++){
@@ -419,7 +353,6 @@
 //         }
 //     }
 // }
-
 //4)
 // public class Main{
 //     public static void main(String[] args){
@@ -433,14 +366,11 @@
 //          for(int j=0;j<i;j++){
 //                     if(arr[i]<max) secmax = arr[i];
 //                 }
-        
 //             }
 //         System.out.println("The max element in the array is: "+max);
 //         System.out.println("The second-max element in the array is: "+secmax);
 //     }
 // }
-
-
 //5)
 // public class Main{
 //     public static void main(String[] args){
@@ -453,14 +383,11 @@
 //         System.out.println("Sum of the elements greater than x are: "+sum);
 //     }
 // }
-
-
 //6) LEETCODE: TWO SUM QUESTION.
 // class Solution{
 //     public int[] twoSum(int[] nums,int target){
 //         int n = nums.length;
 //         int[] ans = new int[2];
-
 //         for(int i=0;i<n;i++){
 //             for(int j=0;j<n;j++){
 //                 if(i != j && nums[i]+nums[j]==target){
@@ -483,30 +410,21 @@
 //         System.out.println("Indices: " + result[0] + ", " + result[1]);
 //     }
 // }
-
-
 //7)REVERSE AN ARRAY WITHOUT USING ANOTHER ARRAY:
 // import java.util.Arrays;
-
 // class ReverseArray {
-
 //     public int[] Reverse(int[] arr) {
 //         int n = arr.length;
-
 //         for (int i = 0; i < n / 2; i++) {
 //             int j = n - 1 - i;
 //             int temp = arr[i];
 //             arr[i] = arr[j];
 //             arr[j] = temp;
 //         }
-
 //         return arr;
-
 //     }
 // }
-
 // public class Main {
-
 //     public static void main(String[] args) {
 //         int[] array = {1, 2, 3, 4, 5, 6, 7};
 //         ReverseArray ra = new ReverseArray();
@@ -514,12 +432,8 @@
 //         System.out.println("The Reversed Array is: " + Arrays.toString(result));
 //     }
 // }
-
-
 //=======================================DSA MASTERY=========================================
-
 //1.Print all elements of an array
-
 // public class Main{
 //     public static void main(String[] args){
 //         int[] array = {1,2,3,4,5,5,6,8};
@@ -528,19 +442,16 @@
 //         }
 //     }
 // }
-
 //2.Print elements at even and odd indices separately
 // public class Main{
 //     public static void main(String[] args) {
 //         int[] arr={1,2,3,4,5,6,7,8};
-
 //         System.out.println("Elements at Even Index: ");
 //         for(int i=0; i<arr.length; i++){
 //             if(i%2 == 0){
 //                 System.out.println(arr[i]);
 //             }
 //         }
-
 //         System.out.println("Elements at Odd Index: ");
 //         for(int i = 0; i<arr.length; i++){
 //              if(i%2 != 0){
@@ -549,15 +460,12 @@
 //         }
 //     }
 // }
-
-
 //3. COUNT TOTAL EVEN AND ODD INDEXES.
 // public class Main{
 //     public static void main(String[] args){
 //         int[] arr = {9,7,8,6,5,4,3,2};
 //         int evencount = 0;
 //         int oddcount = 0;
-        
 //         System.out.println("The Even Elements are: ");
 //         for(int i=0; i<arr.length; i++){
 //             if(i%2 == 0){
@@ -565,26 +473,21 @@
 //             }
 //         }
 //         System.out.println(evencount);
-
 //         System.out.println("The Odd Elements are: ");
 //         for(int i=0; i<arr.length; i++){
 //             if(i%2 != 0){
 //                 oddcount ++;
 //             }
 //         }
-        
 //         System.out.println(oddcount);
 //     }
 // }
-
 //3.1 //3. COUNT TOTAL EVEN AND ODD ELEMENTS.
-
 // public class Main{
 //     public static void main(String[] args){
 //         int[] arr = {2,4,6,9,9,9,9,9,9};
 //         int evencount = 0;
 //         int oddcount = 0;
-        
 //         System.out.println("The Even Elements are: ");
 //         for(int i=0; i<arr.length; i++){
 //             if(arr[i]%2 == 0){
@@ -592,18 +495,15 @@
 //             }
 //         }
 //         System.out.println(evencount);
-
 //         System.out.println("The Odd Elements are: ");
 //         for(int i=0; i<arr.length; i++){
 //             if(arr[i]%2 != 0){
 //                 oddcount ++;
 //             }
 //         }
-        
 //         System.out.println(oddcount);
 //     }
 // }
-
 //4. COUNT POSITIVE NEGATIVE AND ZERO ELEMENTS.
 // public class Main{
 //     public static void main(String[] args) {
@@ -625,14 +525,9 @@
 //        System.out.println("The number of Zero elements are: "+zero);
 //     }
 // }
-
-
 //5. FIND THE ELEMENT THAT OCCURS MORE FREQUENTLY.
-
 //boores moyar's voting algorithm...
-
 //==============================================2D ARRAYS ================================
-
 //=====with both rows and cols are declared here ;
 // import java.util.*;
 // public class Main{
@@ -641,32 +536,25 @@
 //         Scanner sc = new Scanner(System.in);
 //         int[][] arr = new int[3][2];
 //         System.out.println(arr.length);
-
 //         for(int row=0; row<arr.length; row++){
 //             for(int col = 0; col<arr[row].length; col++){
 //                 arr[row][col] = sc.nextInt();
 //             }
 //         }
-
 //         for(int row=0; row<arr.length; row++){
 //             for(int col = 0; col<arr[row].length; col++){
 //                 System.out.print(arr[row][col]+" ");
 //             }
 //             System.out.println();
 //         }
- 
 //     }
 // }
-
-
-
 //-----------when just the rows are declared so you can take any of the columsn-------
 // import java.util.*;
 // public class Main{
 //     public static void main(String[] args){
 //         Scanner sc = new Scanner(System.in);
 //         int[][] arr = new int[4][4];
-
 //         for(int row = 0; row<arr.length; row++){
 //             for(int col = 0; col<arr[row].length; col++){
 //                 arr[row][col] = sc.nextInt();
@@ -674,28 +562,54 @@
 //             System.out.print(" ");
 //         }
 //         System.out.println();
-
 //         for(int row = 0; row<arr.length; row++){
 //             System.out.println(Arrays.toString(arr[row]));
 //         }
 //     }
 // }
+//===========================ARRAYLIST===============================
+// import java.util.*;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+//         ArrayList<Integer> list = new ArrayList<>(10);
+//         list.add(23);
+//         list.add(344);
+//         list.add(857);
+
+//         System.out.println("List after addition is: " + list);
+
+//         System.out.println(list.contains(23));  // prints true or false
+//         System.out.println(list.contains(344));  // prints true or false
+//         System.out.println(list.contains(99));  // prints true or false
+
+//         list.set(0, 1);
+//         list.set(1, 2);
+//         list.set(2, 3);
+//         System.out.println("List after updation is: " + list);
+
+//         list.remove(2);
+//         list.remove(1);
+//         System.out.println("List after removing: " + list);
+
+//     }
+// }
 
 
 
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>(10);
 
+        for(int i = 0; i<5; i++){
+            list.add(sc.nextInt());
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for(int i = 0; i<5; i++){
+            System.out.print(list.get(i)+" ");
+        }
+    }
+}
