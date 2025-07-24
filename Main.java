@@ -629,137 +629,73 @@
 
 //5. FIND THE ELEMENT THAT OCCURS MORE FREQUENTLY.
 
+//boores moyar's voting algorithm...
 
+//==============================================2D ARRAYS ================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//===================================================FAKE=========================
-1.Print all elements of an array
-
-// public class Main{
-//     public static void main(String[] args){
-//         int[] array = {1,2,3,4,5,5,6,8};
-//         for(int i=0;i<array.length;i++){
-//             System.out.println(array[i]);
-//         }
-//     }
-// }
-
-//2.Print elements at even and odd indices separately
+//=====with both rows and cols are declared here ;
+// import java.util.*;
 // public class Main{
 //     public static void main(String[] args) {
-//         int[] arr={1,2,3,4,5,6,7,8};
+//         // int[][] arr = new int[3][3];
+//         Scanner sc = new Scanner(System.in);
+//         int[][] arr = new int[3][2];
+//         System.out.println(arr.length);
 
-//         System.out.println("Elements at Even Index: ");
-//         for(int i=0; i<arr.length; i++){
-//             if(i%2 == 0){
-//                 System.out.println(arr[i]);
+//         for(int row=0; row<arr.length; row++){
+//             for(int col = 0; col<arr[row].length; col++){
+//                 arr[row][col] = sc.nextInt();
 //             }
 //         }
 
-//         System.out.println("Elements at Odd Index: ");
-//         for(int i = 0; i<arr.length; i++){
-//              if(i%2 != 0){
-//                 System.out.println(arr[i]);
+//         for(int row=0; row<arr.length; row++){
+//             for(int col = 0; col<arr[row].length; col++){
+//                 System.out.print(arr[row][col]+" ");
 //             }
+//             System.out.println();
 //         }
+ 
 //     }
 // }
 
 
-//3. COUNT TOTAL EVEN AND ODD INDEXES.
+
+//-----------when just the rows are declared so you can take any of the columsn-------
+// import java.util.*;
 // public class Main{
 //     public static void main(String[] args){
-//         int[] arr = {9,7,8,6,5,4,3,2};
-//         int evencount = 0;
-//         int oddcount = 0;
-        
-//         System.out.println("The Even Elements are: ");
-//         for(int i=0; i<arr.length; i++){
-//             if(i%2 == 0){
-//                 evencount ++;
+//         Scanner sc = new Scanner(System.in);
+//         int[][] arr = new int[4][4];
+
+//         for(int row = 0; row<arr.length; row++){
+//             for(int col = 0; col<arr[row].length; col++){
+//                 arr[row][col] = sc.nextInt();
 //             }
+//             System.out.print(" ");
 //         }
-//         System.out.println(evencount);
+//         System.out.println();
 
-//         System.out.println("The Odd Elements are: ");
-//         for(int i=0; i<arr.length; i++){
-//             if(i%2 != 0){
-//                 oddcount ++;
-//             }
+//         for(int row = 0; row<arr.length; row++){
+//             System.out.println(Arrays.toString(arr[row]));
 //         }
-        
-//         System.out.println(oddcount);
-//     }
-// }
-
-//3.1 //3. COUNT TOTAL EVEN AND ODD ELEMENTS.
-
-// public class Main{
-//     public static void main(String[] args){
-//         int[] arr = {2,4,6,9,9,9,9,9,9};
-//         int evencount = 0;
-//         int oddcount = 0;
-        
-//         System.out.println("The Even Elements are: ");
-//         for(int i=0; i<arr.length; i++){
-//             if(arr[i]%2 == 0){
-//                 evencount ++;
-//             }
-//         }
-//         System.out.println(evencount);
-
-//         System.out.println("The Odd Elements are: ");
-//         for(int i=0; i<arr.length; i++){
-//             if(arr[i]%2 != 0){
-//                 oddcount ++;
-//             }
-//         }
-        
-//         System.out.println(oddcount);
-//     }
-// }
-
-//4. COUNT POSITIVE NEGATIVE AND ZERO ELEMENTS.
-// public class Main{
-//     public static void main(String[] args) {
-//        int[] arr = {1,2,3,-5,-8,-5,-6,0,0,0,0}; 
-//        int negative = 0; 
-//        int positive = 0; 
-//        int zero = 0;
-//        for(int i=0; i<arr.length; i++){
-//         if(arr[i] == 0){
-//             zero++;
-//         }else if(arr[i] < 0){
-//             negative++;
-//         }else if(arr[i] > 0){
-//             positive++;
-//         }
-//        }
-//        System.out.println("The number of negative elements are: "+negative);
-//        System.out.println("The number of positive elements are: "+positive);
-//        System.out.println("The number of Zero elements are: "+zero);
 //     }
 // }
 
 
-//5. FIND THE ELEMENT THAT OCCURS MORE FREQUENTLY.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
