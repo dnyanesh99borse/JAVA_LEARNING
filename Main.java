@@ -569,47 +569,174 @@
 // }
 //===========================ARRAYLIST===============================
 // import java.util.*;
-
 // public class Main {
-
 //     public static void main(String[] args) {
 //         ArrayList<Integer> list = new ArrayList<>(10);
 //         list.add(23);
 //         list.add(344);
 //         list.add(857);
-
 //         System.out.println("List after addition is: " + list);
-
 //         System.out.println(list.contains(23));  // prints true or false
 //         System.out.println(list.contains(344));  // prints true or false
 //         System.out.println(list.contains(99));  // prints true or false
-
 //         list.set(0, 1);
 //         list.set(1, 2);
 //         list.set(2, 3);
 //         System.out.println("List after updation is: " + list);
-
 //         list.remove(2);
 //         list.remove(1);
 //         System.out.println("List after removing: " + list);
+//     }
+// }
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         ArrayList<Integer> list = new ArrayList<>(10);
+//         for(int i = 0; i<5; i++){
+//             list.add(sc.nextInt());
+//         }
+//         for(int i = 0; i<5; i++){
+//             System.out.print(list.get(i)+" ");
+//         }
+//     }
+// }
+//==================================ARRAYLIST OF ARRAYLIST=======================
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] arg){
+//         Scanner sc = new Scanner(System.in);
+//         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+//         //initialisation //like initialisation of the 2d array
+//         for(int i=0; i<3; i++){
+//             list.add(new ArrayList<>());
+//         }
+//         //add elements 
+//         for(int i = 0;i<3; i++){
+//             for(int j=0; j<3; j++){
+//                 list.get(i).add(sc.nextInt());
+//                 //it's like list[i] == sc.nestInt();
+//             }
+//         }
+//         System.out.println(list);
+//     }
+// }
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args){
+//         int[] arr = {1,2,3,4,5,6,7};
+//         swap(arr,1,5);
+//         System.out.println(Arrays.toString(arr));
+//     }
+//     static void swap(int[] arr, int index1, int index2){
+//         int temp = arr[index1];
+//         arr[index1] = arr[index2];
+//         arr[index2] = temp;
+//     }
+// }
+// public class Main{
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4,5};
+//         System.out.println(max(arr));
+//     }
+//     static int max(int[] arr){
+//         int max = arr[0];
+//         for(int i=0; i<arr.length; i++){
+//             if(arr[i] > max){
+//                 max = arr[i];
+//             }
+//         }
+//         return max;
+//     }
+// }
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args){
+//         int[] arr = {1,3,23,9,18};
+//         int i = 0;
+//         int j = arr.length - 1;
+//         while(i < j){
+//             int temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//             i++;
+//             j--;
+//         }
+//         System.out.println(Arrays.toString(arr));
+//     }
+// }
+//=====================================LINEAR SEARCH=================
+// public class Main {
 
+//     static int linearSearch(int[] arr, int target) {
+//         if (arr.length == 0) {
+//             return -1;
+//         }
+
+//         for (int index = 0; index < arr.length; index++) {
+//             int element = arr[index];
+//             if (element == target) {
+//                 return index;
+//             }
+//         }
+//         return -1;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] nums = {1, 2, 3, 4, 5, 7, -20, -22, 45, 90};
+//         int target = 90;
+//         int ans = linearSearch(nums, target);
+//         System.out.println(ans);
 //     }
 // }
 
 
+//=============returning TRUE OR FALSE IN ANY CASE MIGHT BE THE -1 BE THE TARGET ================================
 
+// public class Main{
+//     static boolean LinearSearch(int[] arr, int target){
+//         if(arr.length == 0){
+//             return false;
+//         }
+
+//         for(int element: arr){
+//             if(element == target){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+//         public static void main(String[] args){
+//             int[] nums = {1,2,3,4,5,6,7,8,9};
+//             int target = 5;
+
+//             boolean ans = LinearSearch(nums, target);
+//             System.out.println(ans);
+//         }    
+//  }
+
+
+//======================LINEAR SEARHING IN STRING and TO RETURN INDEX ALSO=====================
 import java.util.*;
 public class Main{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> list = new ArrayList<>(10);
+        String name = "Dnyaneshwar";
+        char target = 'n';
+        System.out.println(Search(name,target));
+    }
 
-        for(int i = 0; i<5; i++){
-            list.add(sc.nextInt());
+    static boolean Search(String str, char target){
+        if(str.length() == 0){
+            return false;
         }
 
-        for(int i = 0; i<5; i++){
-            System.out.print(list.get(i)+" ");
+        for(int i=0; i<str.length(); i++){
+            if(target == str.charAt(i)){
+                System.out.println(i);
+                return true;
+            }
         }
+        
+        return false;
     }
 }
