@@ -1,15 +1,11 @@
 package CYCLICSORT;
 
+import java.util.List;
+import java.util.ArrayList;
 public class DisappearedNumber {
-    public static void main(String[] args){
-        int[] arr = {4,3,2,7,8,2,3,1};
-        int disappear = Disappear(arr);
-        System.out.println(disappear);
-    }
-
-    public static int Disappear(int[] arr){
+    public List<Integer> Disappear(int[] arr){
         int i = 0;
-        while(i < arr.length - 1){
+        while(i < arr.length){
             int correct = arr[i] - 1;
             if(arr[i] != arr[correct]){
                 swap(arr,i,correct);
@@ -18,16 +14,17 @@ public class DisappearedNumber {
             }
         }
         //search for first missing number
-        for(int index=0; index<arr.length; index++){
-            if(arr[index] != index){
-                return index;
+        List<Integer> ans = new ArrayList<>();
+            for(int index=0; index<arr.length; index++){
+                if(arr[index] != index + 1){
+                    ans.add(index + 1);
+                }
             }
-        }
-        return arr.length;
+            return ans;
     }
     static void swap(int[] arr,int start,int k){
-        int temp = arr[start];
-        arr[start] = arr[k];
-        arr[k] = temp;
+            int temp = arr[start];
+            arr[start] = arr[k];
+            arr[k] = temp;
     }
 }
